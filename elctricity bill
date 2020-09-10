@@ -1,0 +1,26 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract electricityBill{
+    
+    string Name;
+    string addres;
+    int units;
+    int money;
+    string consumerId;
+    
+    function ElectricityBill(string newName, string newAddres,int newUnits,int newMoney,string newConsumerId)public{
+        
+        Name = newName;
+        addres = newAddres;
+        units = newUnits;
+        money = newMoney;
+        consumerId = newConsumerId;
+        
+      }
+     function getElectricityBill()public view returns(string,string,int,int,string){
+         
+         return(Name,addres,units,money,consumerId);
+         
+     } 
+     
+}
